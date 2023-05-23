@@ -8,6 +8,7 @@ module.exports = {
     "eslint:recommended",
     "@vue/eslint-config-prettier",
     "plugin:vitest-globals/recommended",
+    "./.eslintrc-auto-import.json",
   ],
   parserOptions: {
     ecmaVersion: "latest",
