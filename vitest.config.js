@@ -13,6 +13,8 @@ export default mergeConfig(
       transformMode: {
         web: [/\.[jt]sx$/],
       },
+      globals: true,
+      setupFiles: ["./tests/unit/setup.js"],
     },
   })
 );
