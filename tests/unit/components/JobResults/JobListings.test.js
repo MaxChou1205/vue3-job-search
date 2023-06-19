@@ -33,7 +33,7 @@ describe("JobListings", () => {
 
     renderJobListings($route);
 
-    expect(axios.get).toHaveBeenCalledWith("http://localhost:3000/jobs");
+    expect(axios.get).toHaveBeenCalledWith("http://myfakeapi.com/jobs");
   });
 
   it("creates a job listing for every job", async () => {
