@@ -351,6 +351,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@pinia/testing@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@pinia/testing/-/testing-0.1.2.tgz#21aef66d42b06f921bd7bc70511f9f7e9752c763"
+  integrity sha512-8EyBaVFtv682tBiF810u81vAJ1ykwnaldkVDU52oqtVbh5FUj5dSCSM9+MtRM/tZkq0AulwMK4BnBktqwsnEnw==
+  dependencies:
+    vue-demi ">=0.14.5"
+
 "@rollup/pluginutils@^5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.0.2.tgz#012b8f53c71e4f6f9cb317e311df1404f56e7a33"
@@ -3366,6 +3373,14 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
+pinia@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.1.4.tgz#a642adfe6208e10c36d3dc16184a91064788142a"
+  integrity sha512-vYlnDu+Y/FXxv1ABo1vhjC+IbqvzUdiUC3sfDRrRyY2CQSrqqaa+iiHmqtARFxJVqWQMCJfXx1PBvFs9aJVLXQ==
+  dependencies:
+    "@vue/devtools-api" "^6.5.0"
+    vue-demi ">=0.14.5"
+
 pirates@^4.0.1:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.5.tgz#feec352ea5c3268fb23a37c702ab1699f35a5f3b"
@@ -4349,6 +4364,11 @@ vitest@^0.31.0:
     vite "^3.0.0 || ^4.0.0"
     vite-node "0.31.1"
     why-is-node-running "^2.2.2"
+
+vue-demi@>=0.14.5:
+  version "0.14.5"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.5.tgz#676d0463d1a1266d5ab5cba932e043d8f5f2fbd9"
+  integrity sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA==
 
 vue-eslint-parser@^9.3.0:
   version "9.3.0"
