@@ -44,7 +44,7 @@ describe("JobListings", () => {
     renderJobListings($route);
 
     const jobListings = await screen.findAllByRole("listitem");
-    expect(jobListings).toHaveLength(15);
+    expect(jobListings).toHaveLength(10);
   });
 
   describe("when params exclude page number", () => {
