@@ -14,7 +14,7 @@ export default mergeConfig(
         web: [/\.[jt]sx$/],
       },
       globals: true,
-      setupFiles: ["./tests/unit/setup.js"],
+      setupFiles: ["./tests/unit/setup.ts"],
     },
   })
 );

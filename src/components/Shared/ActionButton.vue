@@ -4,8 +4,8 @@
   </button>
 </template>
 
-<script setup>
-import { computed } from "vue";
+<script setup lang="ts">
+import { computed, toRefs } from "vue";
 
 const props = defineProps({
   text: {
@@ -16,15 +16,17 @@ const props = defineProps({
     type: String,
     required: false,
     default: "primary",
-    validator(value) {
+    validator(value: string) {
       return ["primary", "secondary"].includes(value);
     },
   },
 });
 
+const { type } = toRefs(props);
+
 const buttonClass = computed(() => {
   return {
-    [props.type]: true,
+    [type.value]: true,
   };
 });
 </script>

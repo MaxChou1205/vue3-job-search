@@ -18,8 +18,8 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import { ref, computed } from "vue";
 
 defineProps({
   header: {
