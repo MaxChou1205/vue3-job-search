@@ -5,6 +5,8 @@
     <section class="pb-5">
       <job-filters-sidebar-prompt />
 
+      <job-filters-sidebar-skills />
+
       <collapsible-accordion header="Degrees">
         <job-filters-sidebar-checkbox-group
           header="Degrees"
@@ -33,17 +35,28 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
 import { useJobsStore } from "@/stores/jobs";
 import { useUserStore } from "@/stores/user";
 import { useDegreesStore } from "@/stores/degrees";
+import CollapsibleAccordion from "@/components/Shared/CollapsibleAccordion.vue";
 import JobFiltersSidebarCheckboxGroup from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 import JobFiltersSidebarPrompt from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarPrompt.vue";
+import JobFiltersSidebarSkills from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarSkills.vue";
 
+const route = useRoute();
 const jobsStore = useJobsStore();
 const userStore = useUserStore();
 const degreesStore = useDegreesStore();
 const UNIQUE_ORGANIZATIONS = computed(() => jobsStore.UNIQUE_ORGANIZATIONS);
 const UNIQUE_JOB_TYPES = computed(() => jobsStore.UNIQUE_JOB_TYPES);
 const UNIQUE_DEGREES = computed(() => degreesStore.UNIQUE_DEGREES);
+
+const parseSkillsSearchTerm = () => {
+  const role = (route.query.role as string) || "";
+  userStore.UPDATE_SKILLS_SEARCH_TERM(role);
+};
+
+onMounted(parseSkillsSearchTerm);
 </script>
